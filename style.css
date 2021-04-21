@@ -1,0 +1,59 @@
+.prism {
+  --intensity: 1;
+  --scaleFactor: 1.01;
+  --blur: 5;
+  --redTop: 0;
+  --redLeft: 0;
+  --greenTop: 0;
+  --greenLeft: 0;
+  --blueTop: 0;
+  --blueLeft: 0;
+  position: relative;
+  top: 0;
+width:200px;
+}
+.prism > svg:not(:nth-child(4)) {
+  position: absolute;
+  width: calc(var(--scaleFactor) * 100%);
+  height: calc(var(--scaleFactor) * 100%);
+  z-index: -1;
+  filter: blur(calc(var(--blur) * 1px));
+  mix-blend-mode: screen;
+  opacity: var(--intensity);
+}
+.prism > svg:nth-child(1) {
+  top: calc(var(--redTop) * 1px);
+  left: calc(var(--redLeft) * 1px);
+  fill: red;
+}
+.prism > svg:nth-child(1) * {
+  fill: red;
+}
+.prism > svg:nth-child(2)  {
+  top: calc(var(--greenTop) * 1px);
+  left: calc(var(--greenLeft) * 1px);
+  fill: lime;
+}
+.prism > svg:nth-child(2) * {
+  fill: lime;
+}
+.prism > svg:nth-child(3)  {
+  top: calc(var(--blueTop) * 1px);
+  left: calc(var(--blueLeft) * 1px);
+  fill: blue;
+}
+.prism > svg:nth-child(3)  *{
+  fill: blue;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+}
+
+:root {
+  --bg: #222;
+  --fg: #fff;
+}
