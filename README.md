@@ -1,4 +1,4 @@
 # Logo-RGB
 
 # Zmiana loga 
-Logo mozna zmienić piszesz zmiane svg w div o klasie prisma
+Logo mozna zmienić poprzez zmiane svg w dive o klasie prisma
